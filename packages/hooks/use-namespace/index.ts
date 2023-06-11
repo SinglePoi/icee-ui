@@ -1,6 +1,6 @@
 import { computed, unref } from 'vue'
 // 默认命名前缀
-export const defaultNamespace = 'el'
+export const defaultNamespace = 'ic'
 const statePrefix = 'is-'
 
 export const useNamespace = (block: string) => {

@@ -1,0 +1,11 @@
+{
+  "name": "@icee-ui/theme-chalk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.css",
+  "style": "index.css",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

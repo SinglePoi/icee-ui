@@ -1,7 +1,9 @@
-module.exports = {
+const { defineConfig } = require('eslint-define-config')
+module.exports = defineConfig({
   env: {
     browser: true,
     es2021: true,
+    node: true,
   },
   extends: [
     'eslint:recommended',
@@ -16,5 +18,9 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint', 'vue'],
-  rules: {},
-}
+  rules: {
+    'no-var': 'error',
+    'prettier/prettier': 'error',
+    '@typescript-eslint/no-var-requires': 'off',
+  },
+})

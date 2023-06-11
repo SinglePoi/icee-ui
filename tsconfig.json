@@ -1,8 +1,7 @@
 {
   "files": [],
   "references": [
-    { "path": "./tsconfig.web.json" }, // 组件包部分
-    { "path": "./tsconfig.play.json" }, // 组件 play 部分
-    { "path": "./tsconfig.vitest.json" } // 组件测试部分
+    { "path": "./tsconfig.web.json" }, // 组件核心部分
+    { "path": "./tsconfig.playground.json" } // 组件展示部分
   ]
 }
