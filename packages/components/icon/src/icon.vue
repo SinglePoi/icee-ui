@@ -1,14 +1,29 @@
 <template>
-  <i :class="bem.b()">
+  <i :class="bem.b()" :style="style">
     <slot />
   </i>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+import { addUnit, isUndefined } from '@icee-ui/utils'
 import { useNamespace } from '@icee-ui/hooks'
-const bem = useNamespace('icon')
+import { iconProps } from './icon'
+import type { CSSProperties } from 'vue'
+
 defineOptions({
   name: 'IcIcon',
   inheritAttrs: false,
+})
+
+const bem = useNamespace('icon')
+const props = defineProps(iconProps)
+const style = computed<CSSProperties>(() => {
+  if (!props.size && !props.color) return {}
+
+  return {
+    fontSize: isUndefined(props.size) ? undefined : addUnit(props.size),
+    '--color': props.color,
+  }
 })
 </script>
