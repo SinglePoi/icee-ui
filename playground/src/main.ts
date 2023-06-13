@@ -2,10 +2,10 @@ import { createApp } from 'vue'
 // import './style.css'
 import App from './App.vue'
 
-import IcIcon from '@icee-ui/components/icon'
+import * as UI from '@icee-ui/components'
 import '@icee-ui/theme-chalk/src/index.scss'
 
-const components = [IcIcon]
+const components = [UI.IcButton, UI.IcIcon]
 // 是否已安装标识
 const INSTALLED_KEY = Symbol('INSTALLED_KEY')
 const ElementPlus = {

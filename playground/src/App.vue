@@ -1,8 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+// import IconPlay from '@/components/IconPlay.vue'
+import ButtonPlay from '@/components/ButtonPlay.vue'
+</script>
 
 <template>
   <div>
-    <ic-icon color="green">icon</ic-icon>
+    <button-play></button-play>
   </div>
 </template>
 
