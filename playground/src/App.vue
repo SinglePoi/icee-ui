@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    <IcIcon color="green">icon</IcIcon>
+    <ic-icon color="green">icon</ic-icon>
   </div>
 </template>
 

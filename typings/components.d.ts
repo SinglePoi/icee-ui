@@ -1,7 +1,6 @@
-import type Icon from '@cobyte-ui/components/icon'
+import type Icon from '@icee-ui/components/icon'
 // For this project development
 import '@vue/runtime-core'
-
 declare module '@vue/runtime-core' {
   // Vue 3
   // declare module 'vue' {   // Vue 2.7

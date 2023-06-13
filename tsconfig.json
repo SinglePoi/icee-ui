@@ -2,7 +2,6 @@
   "files": [],
   "references": [
     { "path": "./tsconfig.web.json" }, // 组件核心部分
-    { "path": "./tsconfig.playground.json" }, // 组件展示部分
-    { "path": "./tsconfig.node.json" }
+    { "path": "./tsconfig.playground.json" } // 组件展示部分
   ]
 }
