@@ -11,7 +11,9 @@ nextTick(() => {
 </script>
 
 <template>
-  <ic-button ref="buttonRef" @click="handleClick">按钮</ic-button>
+  <ic-button ref="buttonRef" @click="handleClick" :loading="true"
+    >按钮</ic-button
+  >
   <ic-button type="primary" @click="handleClick" :icon="Edit"
     >Primary</ic-button
   >
@@ -21,6 +23,14 @@ nextTick(() => {
   <ic-button type="danger" disabled @click="handleClick">Danger</ic-button>
   <ic-button size="large" @click="handleClick">按钮</ic-button>
   <ic-button size="small" @click="handleClick">按钮</ic-button>
+  <ic-button size="small" @click="handleClick">
+    <template #icon><Edit /></template>
+  </ic-button>
+  <p>-------button-group-------</p>
+  <ic-button-group type="success" size="large">
+    <ic-button>按钮1</ic-button>
+    <ic-button>按钮2</ic-button>
+  </ic-button-group>
 </template>
 
 <style scoped></style>

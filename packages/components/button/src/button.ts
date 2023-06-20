@@ -1,3 +1,5 @@
+import { Loading } from '@element-plus/icons-vue'
+
 import type { ExtractPropTypes, PropType } from 'vue'
 import type Button from './button.vue'
 
@@ -24,6 +26,11 @@ export type ButtonType =
 export type ButtonNativeType = 'button' | 'submit' | 'reset'
 
 export const buttonProps = {
+  loading: Boolean,
+  loadingIcon: {
+    type: [Object, String] as PropType<object | string>,
+    default: () => Loading,
+  },
   nativeType: {
     type: String as PropType<ButtonNativeType>,
     default: 'button',
