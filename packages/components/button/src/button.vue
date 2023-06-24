@@ -53,7 +53,7 @@ const _ref = ref<HTMLButtonElement>()
 // 使用 inject 取出祖先组件提供的依赖
 const buttonGroupContext = inject(buttonGroupContextKey, undefined)
 // 使用 computed 进行缓存计算
-const _size = computed(() => props.type || buttonGroupContext?.size)
+const _size = computed(() => props.size || buttonGroupContext?.size)
 const _type = computed(() => props.type || buttonGroupContext?.type || '')
 
 // 组件暴露自己的属性以及方法，去供外部使用

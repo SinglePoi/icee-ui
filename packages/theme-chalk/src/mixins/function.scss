@@ -41,3 +41,21 @@
   @return containsModifier($selector) or containWhenFlag($selector) or
     containPseudoClass($selector);
 }
+
+@function joinVarName($list) {
+  $name: '--' + config.$namespace;
+  @each $item in $list {
+    @if $item != '' {
+      $name: $name + '-' + $item;
+    }
+  }
+  @return $name;
+}
+
+@function getCssVar($args...) {
+  @return var(#{joinVarName($args)});
+}
+
+@function getCssVarName($args...) {
+  @return joinVarName($args);
+}
