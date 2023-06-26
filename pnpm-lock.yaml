@@ -6,6 +6,7 @@ importers:
     specifiers:
       '@element-plus/icons-vue': ^2.1.0
       '@icee-ui/components': workspace:^1.0.0
+      '@icee-ui/constants': workspace:^1.0.0
       '@icee-ui/hooks': workspace:^1.0.0
       '@icee-ui/theme-chalk': workspace:^1.0.0
       '@icee-ui/tokens': workspace:^1.0.0
@@ -35,6 +36,7 @@ importers:
       vue-tsc: ^1.4.2
     dependencies:
       '@element-plus/icons-vue': 2.1.0_vue@3.3.4
+      '@icee-ui/constants': link:packages/constants
       '@icee-ui/tokens': link:packages/tokens
       eslint-config-prettier: 8.8.0_eslint@8.42.0
       eslint-plugin-prettier: 4.2.1_vnriwwub2rhvoyn4ckagrc4lpi
