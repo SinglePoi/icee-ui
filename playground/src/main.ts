@@ -3,7 +3,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 import * as UI from '@icee-ui/components'
-import '@icee-ui/theme-chalk/src/index.scss'
+// import '@icee-ui/theme-chalk/src/index.scss'
 
 const components = [UI.IcButton, UI.IcIcon, UI.IcButtonGroup, UI.IcInput]
 // 是否已安装标识

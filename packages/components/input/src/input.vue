@@ -53,9 +53,9 @@ type TargetElement = HTMLInputElement
 const isComposing = ref(false)
 
 const handleInput = async (event: Event) => {
-  const { value } = event.target as TargetElement
   // 如果正在使用拼音输入法，忽略该 input 事件
   if (isComposing.value) return
+  const { value } = event.target as TargetElement
   // 发射 v-model 的 update:modelValue 监听事件
   emit(UPDATE_MODEL_EVENT, value)
   await nextTick()
