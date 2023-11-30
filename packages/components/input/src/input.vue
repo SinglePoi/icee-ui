@@ -1,13 +1,17 @@
 <template>
   <div :class="ns.b()">
-    <input
-      ref="input"
-      :type="type"
-      @input="handleInput"
-      @compositionstart="handleCompositionStart"
-      @compositionupdate="handleCompositionUpdate"
-      @compositionend="handleCompositionEnd"
-    />
+    <div :class="ns.e('wrapper')">
+      <input
+        ref="input"
+        :type="type"
+        :class="ns.e('inner')"
+        :placeholder="placeholder"
+        @input="handleInput"
+        @compositionstart="handleCompositionStart"
+        @compositionupdate="handleCompositionUpdate"
+        @compositionend="handleCompositionEnd"
+      />
+    </div>
   </div>
 </template>
 
