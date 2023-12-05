@@ -2,3 +2,6 @@
 export * from './dom'
 export * from './types'
 export * from './vue'
+export * from './typescript'
+export * from './arrays'
+export * from './objects'

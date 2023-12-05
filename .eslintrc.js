@@ -23,7 +23,7 @@ module.exports = defineConfig({
     'prettier/prettier': 'error',
     // js/ts
     camelcase: ['error', { properties: 'never' }],
-    'no-console': ['error', { allow: ['error', 'warn'] }],
+    // 'no-console': ['error', { allow: ['error', 'warn'] }],
     'no-debugger': 'warn',
     'no-constant-condition': ['error', { checkLoops: false }],
     'no-restricted-syntax': ['error', 'LabeledStatement', 'WithStatement'],

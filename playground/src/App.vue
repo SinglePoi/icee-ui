@@ -1,13 +1,12 @@
 <script setup lang="ts">
 // import IconPlay from '@/components/IconPlay.vue'
-import ButtonPlay from '@/components/ButtonPlay.vue'
-import '@icee-ui/components/button/style'
+import FormPlay from '@/components/FormPlay.vue'
 // import InputPlay from '@/components/InputPlay.vue'
 </script>
 
 <template>
   <div>
-    <component :is="ButtonPlay"></component>
+    <component :is="FormPlay"></component>
   </div>
 </template>
 

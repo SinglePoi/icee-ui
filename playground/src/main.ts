@@ -3,9 +3,16 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 import * as UI from '@icee-ui/components'
-// import '@icee-ui/theme-chalk/src/index.scss'
+import '@icee-ui/theme-chalk/src/index.scss'
 
-const components = [UI.IcButton, UI.IcIcon, UI.IcButtonGroup, UI.IcInput]
+const components = [
+  UI.IcButton,
+  UI.IcIcon,
+  UI.IcButtonGroup,
+  UI.IcInput,
+  UI.IcForm,
+  UI.IcFormItem,
+]
 // 是否已安装标识
 const INSTALLED_KEY = Symbol('INSTALLED_KEY')
 const ElementPlus = {
