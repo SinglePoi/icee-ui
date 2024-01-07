@@ -11,9 +11,7 @@
       ns.is('circle', circle),
     ]"
     @click="handleClick"
-    :disabled="disabled"
-    :autofocus="autofocus"
-    :type="nativeType"
+    v-bind="_props"
   >
     <template v-if="loading">
       <slot v-if="$slots.loading" name="loading" />
@@ -25,16 +23,17 @@
       <component :is="icon" v-if="icon" />
       <slot v-else name="icon" />
     </ic-icon>
-    <slot />
+    <span v-if="$slots.default">
+      <slot />
+    </span>
   </button>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, inject } from 'vue'
-import { buttonGroupContextKey } from '@icee-ui/tokens'
 import { useNamespace } from '@icee-ui/hooks'
 import { buttonProps, buttonEmits } from './button'
 import IcIcon from '@icee-ui/components/icon'
+import { useButton } from './use-button'
 defineOptions({
   name: 'IcButton',
 })
@@ -44,21 +43,19 @@ const props = defineProps(buttonProps)
 const emit = defineEmits(buttonEmits)
 // classname 的 BEM 命名
 const ns = useNamespace('button')
-// 点击事件函数
-const handleClick = (evt: MouseEvent) => {
-  emit('click', evt)
-}
-// 按钮 html 元素
-const _ref = ref<HTMLButtonElement>()
-// 使用 inject 取出祖先组件提供的依赖
-const buttonGroupContext = inject(buttonGroupContextKey, undefined)
-// 使用 computed 进行缓存计算
-const _size = computed(() => props.size || buttonGroupContext?.size)
-const _type = computed(() => props.type || buttonGroupContext?.type || '')
+
+const { _ref, _size, _type, _props, handleClick } = useButton(props, emit)
 
 // 组件暴露自己的属性以及方法，去供外部使用
 defineExpose({
+  /**@description 组件实例 */
   ref: _ref,
+  /**@description 组件尺寸 */
+  size: _size,
+  /**@description 组件状态 */
+  type: _type,
+  /**@description 组件禁用 */
+  disabled: props.disabled,
 })
 </script>
 

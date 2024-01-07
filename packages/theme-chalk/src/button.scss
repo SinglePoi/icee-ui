@@ -33,7 +33,8 @@ $button-icon-span-gap: map.merge(
   outline: none;
   transition: 0.1s;
   font-weight: getCssVar('button', 'font-weight');
-  user-select: none;
+  // user-select: none;
+  -webkit-user-select: none;
   vertical-align: middle;
   -webkit-appearance: none;
   background-color: getCssVar('button', 'bg-color');
