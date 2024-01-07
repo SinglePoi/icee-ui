@@ -16,7 +16,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@icee-ui/build-utils": "workspace:^1.0.0",
     "@types/lodash-es": "^4.17.7",
     "@types/node": "^20.2.5",
     "@typescript-eslint/eslint-plugin": "^5.59.9",
@@ -32,7 +31,6 @@
     "husky": "^8.0.0",
     "lint-staged": "^13.2.2",
     "lodash": "^4.17.21",
-    "lodash-es": "^4.17.21",
     "lodash-unified": "^1.0.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.8",
@@ -46,11 +44,11 @@
     "@icee-ui/components": "workspace:^1.0.0",
     "@icee-ui/constants": "workspace:^1.0.0",
     "@icee-ui/hooks": "workspace:^1.0.0",
-    "@icee-ui/theme-chalk": "workspace:^1.0.0",
     "@icee-ui/tokens": "workspace:^1.0.0",
     "@icee-ui/utils": "workspace:^1.0.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "icee-ui": "link:C:/Users/rotat/codeSpace/icee-ui/dist/icee-ui",
     "typescript": "^5.0.2"
   },
   "lint-staged": {
