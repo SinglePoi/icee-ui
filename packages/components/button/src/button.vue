@@ -1,5 +1,6 @@
 <template>
-  <button
+  <component
+    :is="tag"
     ref="_ref"
     :class="[
       ns.b(),
@@ -9,6 +10,7 @@
       ns.is('plain', plain),
       ns.is('round', round),
       ns.is('circle', circle),
+      ns.is('link', link),
     ]"
     @click="handleClick"
     v-bind="_props"
@@ -23,10 +25,14 @@
       <component :is="icon" v-if="icon" />
       <slot v-else name="icon" />
     </ic-icon>
-    <span v-if="$slots.default">
+    <span
+      v-if="$slots.default"
+      :class="{ [ns.em('text', 'expand')]: shouldAddSpace }"
+    >
+      <!-- 汉字之间插入两个空白字符 -->
       <slot />
     </span>
-  </button>
+  </component>
 </template>
 
 <script setup lang="ts">
@@ -44,7 +50,10 @@ const emit = defineEmits(buttonEmits)
 // classname 的 BEM 命名
 const ns = useNamespace('button')
 
-const { _ref, _size, _type, _props, handleClick } = useButton(props, emit)
+const { _ref, _size, _type, _props, handleClick, shouldAddSpace } = useButton(
+  props,
+  emit
+)
 
 // 组件暴露自己的属性以及方法，去供外部使用
 defineExpose({
